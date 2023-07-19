@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/menu.js">
+
+    <link href="css/animsition.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      <script>
+        $(function(){
+        $(window).scroll(function (){
+        $('.fadein').each(function(){
+        var targetElement = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > targetElement - windowHeight + 200){
+        $(this).css('opacity','1');
+        $(this).css('transform','translateY(0)');
+        }
+        });
+        });
+        });
+        </script>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'fade-out',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+    </script>
+    <script>
+        $(function() {
+        var topBtn = $('#page-top');
+        topBtn.hide();
+        //スクロールが100pxに達したらボタン表示
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+        topBtn.fadeIn();
+        } else {
+        topBtn.fadeOut();
+        }
+        });
+        //スクロールしてトップ
+        topBtn.click(function () {
+        $('body,html').animate({
+        scrollTop: 0
+        }, 500);
+        return false;
+        });
+        });
+        </script>
+
+
+        <!--loading start-->
+        <script>
+            $(function(){
+        //読み込みが完了したら実行する
+        $(window).on('load',function(){
+          //ローディングアニメーションをフェードアウト
+          $('.loader').delay(500).fadeOut(500);
+          //背景色をフェードアウト
+          $('.loader-bg').delay(500).fadeOut(500);
+      });
+      
+        //ページの読み込みが完了してなくても5秒後にアニメーションを非表示にする
+        setTimeout(function(){
+          $('.loader-bg').fadeOut(600);
+        },5000);
+      });
+    
+      setTimeout(function(){
+        $('.loader-bg').fadeOut(600);
+      },5000); //5秒後にfadeOut処理
+          </script>
+    <!--loading end-->
+
+
+    <script>
+      $(function(){
+      $(".cat-ad-bw").hover(function(){
+          $(this).stop().animate({opacity:0},"fast");
+      },function(){
+          $(this).stop().animate({opacity:1},"fast");
+      });
+      });
+  </script>
+
+      <script>
+      $(function(){
+      $(".cat-p-bw").hover(function(){
+          $(this).stop().animate({opacity:0},"fast");
+      },function(){
+          $(this).stop().animate({opacity:1},"fast");
+      });
+      });
+  </script>
+
+
+<script>
+  $(function(){
+  $(".cat-pd-bw").hover(function(){
+      $(this).stop().animate({opacity:0},"fast");
+  },function(){
+      $(this).stop().animate({opacity:1},"fast");
+  });
+  });
+</script> 
+
+<script>
+  $(function(){
+  $(".cat-c-bw").hover(function(){
+      $(this).stop().animate({opacity:0},"fast");
+  },function(){
+      $(this).stop().animate({opacity:1},"fast");
+  });
+  });
+</script>
+
+<script>
+  $(function(){
+  $(".cat-w-bw").hover(function(){
+      $(this).stop().animate({opacity:0},"fast");
+  },function(){
+      $(this).stop().animate({opacity:1},"fast");
+  });
+  });
+</script>
+
+
+<script>
+  $(function(){
+  $(".cat-l-bw").hover(function(){
+      $(this).stop().animate({opacity:0},"fast");
+  },function(){
+      $(this).stop().animate({opacity:1},"fast");
+  });
+  });
+</script>
+
+    
+    <title> LAW's portfolio | WORKS </title>
+
+
+    <div class="loader-bg">
+        <div class="loader"></div>
+      </div>
+
+    <body class="animsition">
+
+    <body bgcolor="#000"></body>
+
+
+    <div class="wrapper">
+        
+        <section>
+
+            <div class="logo">  
+            <a href="index.html"><img src="images/logo/logo_wh.png" width="200px" alt="Katrina Law's Portfolio Site"></a>
+            </div>
+
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="menu-content">
+                    <ul>
+                      <li><a href="profile.html" class="link">PROFILE</a></li>
+                      <li class="works-title">WORKS</li>
+                      <li><a href="advertisement.html" class="sublink">Advertisement</a></li>
+                      <li><a href="packaging.html" class="sublink">Packaging</a></li>
+                      <li><a href="product.html" class="sublink">Product</a></li>
+                      <li><a href="character.html" class="sublink">Character</a></li>
+                      <li><a href="web.html" class="sublink">Web</a></li>
+                      <li><a href="layout.html" class="sublink">Layout</a></li>
+                      <li><a href="contact.html" class="link">CONTACT</a></li>
+                </ul>
+                </div>
+            </div>
+
+<main>
+
+    <div class="works">
+        <h1 class="work-title">Works</h1>
+        <ul class="cat">
+
+          <li class="cat-ad">
+            <a href="advertisement.html">
+              <img class="cat-ad-c" src="images/cat/color/cat-01.jpg">
+              <img class="cat-ad-bw" src="images/cat/mono/cat-ad-mono.jpg">
+            </a> 
+          </li>
+
+          <li class="cat-p">
+            <a href="packaging.html">
+              <img class="cat-p-c" src="images/cat/color/cat-02.jpg">
+              <img class="cat-p-bw" src="images/cat/mono/cat-p-mono.jpg">
+            </a> 
+          </li>
+
+          <li class="cat-pd">
+            <a href="product.html">
+              <img class="cat-pd-c" src="images/cat/color/cat-03.jpg">
+              <img class="cat-pd-bw" src="images/cat/mono/cat-pd-mono.jpg">
+            </a> 
+          </li>
+
+          <li class="cat-c">
+            <a href="character.html">
+              <img class="cat-c-c" src="images/cat/color/cat-04.jpg">
+              <img class="cat-c-bw" src="images/cat/mono/cat-c-mono.jpg">
+            </a> 
+          </li>
+            
+
+          <li class="cat-w">
+            <a href="web.html">
+              <img class="cat-w-c" src="images/cat/color/cat-05.jpg">
+              <img class="cat-w-bw" src="images/cat/mono/cat-w-mono.jpg">
+            </a> 
+          </li>
+
+          <li class="cat-l">
+            <a href="layout.html">
+              <img class="cat-l-c" src="images/cat/color/cat-6.jpg">
+              <img class="cat-l-bw" src="images/cat/mono/cat-l-mono.jpg">
+            </a> 
+          </li>
+
+
+      </ul>
+      </div>
+</div>
+</main>
+
+</section>
+
+<footer>
+    <span><div class="footer"></span>
+        <p class="footercenter"> Copyright <span>&#169;</span> 2023 Katrina Wingching Law All Rights Reserved.</p>
+    
+</div>
+</footer>
